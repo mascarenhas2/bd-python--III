@@ -34,27 +34,27 @@ class Usuario(Base):
 
     def _verificar_nome_vazio(self, nome):
         if nome == "":
-            raise ValueError("O que está sendo solicitado está vazio.")
+            raise ValueError("É necessário preencher o NOME para prosseguir.")
 
     def _verificar_nome_invalido(self, nome):
         if not isinstance(nome, str):
-            raise TypeError("O que está sendo solicitado está inválido.")
+            raise TypeError("ERRO! Nome invalido.")
 
     def _verificar_email_vazio(self, email):
         if email == "":
-            raise ValueError("O que está sendo solicitado está vazio.")
+            raise ValueError("É necessário preencher o E-MAIL para prosseguir.")
 
     def _verificar_email_invalido(self, email):
         if not isinstance(email, str):
-            raise TypeError("O que está sendo solicitado está inválido.")
+            raise TypeError("ERRO! E-mail invalido.")
 
     def _verificar_senha_vazio(self, senha):
         if senha == "":
-            raise ValueError("O que está sendo solicitado está vazio.")
+            raise ValueError("É necessário preencher a senha para prosseguir.")
 
     def _verificar_senha_invalido(self, senha):
         if not isinstance(senha, str):
-            raise TypeError("O que está sendo solicitado está inválido.")
+            raise TypeError("ERRO! Senha invalida.")
 
 # Criação da tabela no banco de dados
 Base.metadata.create_all(bind=db)
