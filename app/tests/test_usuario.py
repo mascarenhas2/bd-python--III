@@ -1,12 +1,5 @@
 import pytest
 from app.models.usuario_model import Usuario
-from app.config.database import db
-import os 
-
-os.system("cls||clear")
-
-import pytest
-from app.models.usuario_model import Usuario
 
 def test_usuario_nome_vazio_retorna_mensagem_erro():
     with pytest.raises(ValueError, match="O que está sendo solicitado está vazio."):
